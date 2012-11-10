@@ -94,12 +94,12 @@ class l2tpvpn ($shared_key, $credentials) {
   service {'xl2tpd':
     status => restart,
     subscribe => $configs,
-    require => Package['xl2tpd'],
+    require => [Package['xl2tpd'], Service['pppd-dns']],
   }
 
   service {'ipsec':
     status => restart,
     subscribe => $configs,
-    require => Package['openswan'],
+    require => [Package['openswan'], Service['xl2tpd']],
   }
 }
