@@ -14,7 +14,7 @@
 #
 #  class { l2tpvpn:
 #    shared_key => 'your-shared-key',
-     credentials => {'your-username' => 'your-password'},
+#     credentials => {'your-username' => 'your-password'},
 #  }
 #
 # === Authors

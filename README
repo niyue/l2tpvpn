@@ -10,6 +10,7 @@ Usage
 -------
 1. Install Puppet
   * Described here, http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html#for-debian-and-ubuntu. Or simply run "curl -L https://raw.github.com/niyue/l2tpvpn/master/bin/install_puppet.sh | bash -s"
+  * sudo apt-get install puppet
   * This should install puppet 3.0 or later.
 
 2. Install the l2tpvpn module
@@ -20,8 +21,8 @@ Usage
   * sudo puppet module install ./pkg/niyue-l2tpvpn-0.1.0.tar.gz --force --target-dir /usr/share/puppet/modules
 
 3. Apply puppet module
-  * Modify the username/password in /usr/share/puppet/module/l2tpvpn/test/init.pp
-  * sudo puppet apply /usr/share/puppet/module/l2tpvpn/test/init.pp
+  * Modify the username/password in /usr/share/puppet/modules/l2tpvpn/tests/init.pp by changing the key/value pair for 'credentials' hash
+  * sudo puppet apply /usr/share/puppet/modules/l2tpvpn/tests/init.pp
 
 4. Redirect script
   * sudo  /usr/share/puppet/module/l2tpvpn/bin/redirect.sh
