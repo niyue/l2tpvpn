@@ -6,6 +6,29 @@ Currently, this module is only verified in puppet v3.0.1 in Ubuntu 12.04 in Wind
 
 It is developped primarily to set up an VPN quickly to climb over the Great Fire Wall for personal use.
 
+Usage
+-------
+1. Install Puppet
+  * Described here, http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html#for-debian-and-ubuntu. Or simply run "curl -L https://raw.github.com/niyue/l2tpvpn/master/bin/install_puppet.sh | bash -s"
+  * This should install puppet 3.0 or later.
+
+2. Install the l2tpvpn module
+  * Install git, sudo apt-get install git
+  * git clone https://github.com/niyue/l2tpvpn.git
+  * cd l2tpvpn
+  * puppet module build
+  * sudo puppet module install ./pkg/niyue-l2tpvpn-0.1.0.tar.gz --force --target-dir /usr/share/puppet/modules
+
+3. Apply puppet module
+  * Modify the username/password in /usr/share/puppet/module/l2tpvpn/test/init.pp
+  * sudo puppet apply /usr/share/puppet/module/l2tpvpn/test/init.pp
+
+4. Redirect script
+  * sudo  /usr/share/puppet/module/l2tpvpn/bin/redirect.sh
+
+5. Open UDP ports
+  * If the server is hosted behind a fire wall, please ensure UDP ports 500 and 4500 are open to allow clients to connect.
+
 License
 -------
 http://www.apache.org/licenses/LICENSE-2.0.html
