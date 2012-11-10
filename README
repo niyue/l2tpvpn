@@ -1,0 +1,20 @@
+l2tpvpn
+
+l2tpvpn module is a puppet (http://puppetlabs.com/) module that can be used to deploy a L2TP VPN quickly in Ubuntu.
+
+Currently, this module is only verified in puppet v3.0.1 in Ubuntu 12.04 in Windows Azure cloud environment.
+
+It is developped primarily to set up an VPN quickly to climb over the Great Fire Wall for personal use.
+
+License
+-------
+http://www.apache.org/licenses/LICENSE-2.0.html
+
+Contact
+-------
+Ni Yue (niyue.com AT gmai1 d0t c0m)
+
+Support
+-------
+
+Just drop me an email.
