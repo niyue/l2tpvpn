@@ -35,7 +35,7 @@ Usage
   * Now you can connect your iOS/Android client to the L2TP VPN server via the credentials specified above
 
 7. Just in case it doesn't work (more efforts are needed to try all the above things in a clean environment), after applying init.pp, try to restart all the related services:
-    1. sudo service restart pppd-dns
+    1. sudo service pppd-dns restart
     2. sudo service xl2tpd restart
     3. sudo service ipsec restart
 
