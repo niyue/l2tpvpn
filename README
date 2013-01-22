@@ -4,7 +4,7 @@ l2tpvpn module is a puppet (http://puppetlabs.com/) module that can be used to d
 
 Currently, this module is only verified in puppet v3.0.1 in Ubuntu 12.04 in Windows Azure cloud environment.
 
-It is developped primarily to set up an VPN quickly to climb over the Great Fire Wall for personal use.
+It is developped primarily to set up a VPN quickly to climb over the Great Fire Wall for personal use.
 
 Usage
 -------
