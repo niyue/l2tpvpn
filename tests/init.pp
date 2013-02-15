@@ -8,6 +8,12 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
+# multiple VPN users can be specified in the 'credentials' hash like below:
+# class {'l2tpvpn': 
+#  shared_key => 'your_shared_key',
+#  credentials => {'user1' => 'password1', 'user2' => 'password2'},
+# }
+
 class {'l2tpvpn': 
   shared_key => 'n0lif3',
   credentials => {'sun' => 'n0lif3'},
