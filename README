@@ -13,16 +13,17 @@ Usage
   * sudo apt-get install puppet
   * This should install puppet 3.0 or later.
 
-2. Install the l2tpvpn module
+2. Download the l2tpvpn module
   * Install git, sudo apt-get install git
   * git clone https://github.com/niyue/l2tpvpn.git
-  * cd l2tpvpn
-  * run "bash ./bin/install_module.sh"
 
-3. Apply puppet module
-  * Modify the username/password in /usr/share/puppet/modules/l2tpvpn/tests/init.pp by changing the key/value pair for 'credentials' hash
-    * sudo vim /usr/share/puppet/modules/l2tpvpn/tests/init.pp
+3. Modify username/password
+  * cd l2tpvpn
+  * Modify the username/password in tests/init.pp by changing the key/value pair for 'credentials' hash
     * change 'shared_key' and credentials to anything you like, and you will use them in step #6 when setting up your VPN client
+
+3. Install and apply puppet module
+  * run "bash ./bin/install_module.sh"
   * sudo puppet apply /usr/share/puppet/modules/l2tpvpn/tests/init.pp
 
 4. Redirect script
