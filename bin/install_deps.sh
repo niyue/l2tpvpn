@@ -2,6 +2,7 @@
 echo "The following script will install puppet, git via apt-get, and clone l2tpvpn module from Github, and you have to enter an admin user's password to do this"
 wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb
 sudo dpkg -i puppetlabs-release-precise.deb
+sudo apt-get install debian-archive-keyring
 sudo apt-get update
 sudo apt-get install puppet
 sudo apt-get install git
