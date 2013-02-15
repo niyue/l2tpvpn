@@ -9,36 +9,24 @@ It is developped primarily to set up a VPN quickly to climb over the Great Fire 
 Usage
 -------
 1. Install Puppet
-  * Run "curl -L https://raw.github.com/niyue/l2tpvpn/master/bin/install_puppet.sh | bash -s", which is an automated version of http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html#for-debian-and-ubuntu
-  * sudo apt-get install puppet
-  * This should install puppet 3.0 or later.
+  * Run "curl -L https://raw.github.com/niyue/l2tpvpn/master/bin/install_deps.sh | bash -s"
+    * This script will install puppet 3.0 or later just like an automated version of http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html#for-debian-and-ubuntu
+    * git will be installed as well
+    * the l2tpvpn puppet module in Github will be installed
 
-2. Download the l2tpvpn module
-  * Install git, sudo apt-get install git
-  * git clone https://github.com/niyue/l2tpvpn.git
-
-3. Modify username/password
+2. Modify username/password
   * cd l2tpvpn
   * Modify the username/password in tests/init.pp by changing the key/value pair for 'credentials' hash
-    * change 'shared_key' and credentials to anything you like, and you will use them in step #6 when setting up your VPN client
+    * change 'shared_key' and credentials to anything you like, and you will use them in step #5 when setting up your VPN client
 
-4. Install and apply puppet module
-  * run "bash ./bin/install_module.sh"
-  * sudo puppet apply /usr/share/puppet/modules/l2tpvpn/tests/init.pp
+3. Install and apply puppet module
+  * run "bash ./bin/apply_puppet.sh"
 
-5. Redirect script
-  * sudo /usr/share/puppet/modules/l2tpvpn/bin/redirect.sh
-
-6. Open UDP ports
+4. Open UDP ports
   * If the server is hosted behind a fire wall, please ensure UDP ports 500 and 4500 are open to allow clients to connect.
 
-7. That's it
+5. That's it
   * Now you can connect your iOS/Android client to the L2TP VPN server via the credentials specified above
-
-8. Just in case it doesn't work (more efforts are needed to try all the above things in a clean environment), after applying init.pp, try to restart all the related services:
-    1. sudo service pppd-dns restart
-    2. sudo service xl2tpd restart
-    3. sudo service ipsec restart
 
 License
 -------
