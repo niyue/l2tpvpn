@@ -9,7 +9,8 @@ It is developped primarily to set up a VPN quickly to climb over the Great Fire 
 Usage
 -------
 1. Install Puppet
-  * Run "curl -L https://raw.github.com/niyue/l2tpvpn/master/bin/install_deps.sh | bash -s"
+  * Run "curl -L https://raw.github.com/niyue/l2tpvpn/master/bin/install_deps.sh -O"
+  * Run "bash install_deps.sh"
     * This script will install puppet 3.0 or later just like an automated version of http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html#for-debian-and-ubuntu
     * git will be installed as well
     * the l2tpvpn puppet module in Github will be installed
