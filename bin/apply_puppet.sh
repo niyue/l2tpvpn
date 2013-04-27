@@ -1,3 +1,4 @@
+#!/bin/sh
 bash ./bin/ipforward.sh
 bash ./bin/install_module.sh
 sudo puppet apply /usr/share/puppet/modules/l2tpvpn/tests/init.pp
