@@ -21,7 +21,7 @@ Usage
     * change 'shared_key' and credentials to anything you like, and you will use them in step #5 when setting up your VPN client
 
 3. Install and apply puppet module
-  * run "bash ./bin/apply_puppet.sh"
+  * run "sudo bash ./bin/apply_puppet.sh"
 
 4. Open UDP ports
   * If the server is hosted behind a fire wall, please ensure UDP ports 500 and 4500 are open to allow clients to connect.
