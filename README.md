@@ -18,7 +18,7 @@ Usage
 		* Run "bash install_deps.sh"  
   	* Amazon Linux
 		* Run "curl -L https://raw.githubusercontent.com/niyue/l2tpvpn/master/bin/install_deps_amazon_linux.sh -O"
-		* Run "bash install_deps_amazon_linux.sh.sh"
+		* Run "bash install_deps_amazon_linux.sh"
   	* Description
 		* This script will install puppet 3.0 or later just like an automated version of http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html#for-debian-and-ubuntu
 		* git will be installed as well
